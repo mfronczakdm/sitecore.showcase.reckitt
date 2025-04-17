@@ -10,7 +10,7 @@ const dmSans = DM_Sans({
 })
 
 export const metadata: Metadata = {
-  title: "Pep Boys - Sitecore Showcase",
+  title: "Reckkit - Sitecore Showcase",
   description: "We Go Further to Help You Go Farther",
     generator: 'v0.dev'
 }

@@ -25,11 +25,11 @@ export default function Home() {
             videos={[
               {
                 id: "stream",
-                title: "strategize, execute, and scale without the busywork.",
+                title: "AI-powered marketing - the future of faster, smarter, and more impactful marketing.",
                 videoUrl:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Stream-wjqOgZVbQVQN0hjFxX0UIS4UvEHZsP.mp4",
+                  "https://res.cloudinary.com/ddaiqvtfq/video/upload/v1744895938/Stream_Introduction_w946vo.mp4",
                 thumbnailUrl:
-                  "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Stream-assistant-l5WjlDDJ6A5a4EwI8kJHsJlE5YLsTN.png", // Stream assistant thumbnail
+                  "https://res.cloudinary.com/ddaiqvtfq/image/upload/v1744896387/Stream_Introduction_Time_0_00_14_25_-_Copy_q36rpj.png", // Stream assistant thumbnail
               },
               {
                 id: "drag-and-drop",

@@ -12,39 +12,30 @@ export default function FeatureAccordion({ data }: FeatureAccordionProps) {
   const [activeIndex, setActiveIndex] = useState(0)
   const [progress, setProgress] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
+
   const pauseTimeoutRef = useRef<NodeJS.Timeout | null>(null)
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
 
-  const resetAutoRotation = () => {
-    if (intervalRef.current) {
-      clearInterval(intervalRef.current)
-    }
-
+  // Handle the progress ticking every 100ms
+  useEffect(() => {
     intervalRef.current = setInterval(() => {
       if (!isPaused) {
-        setProgress((prev) => {
-          if (prev >= 100) {
-            setActiveIndex((prevIndex) => (prevIndex + 1) % data.length)
-            return 0
-          }
-          return prev + 2 // Increment by 2% every 100ms to complete in 5 seconds
-        })
+        setProgress((prev) => Math.min(prev + 2, 100)) // Progress caps at 100
       }
     }, 100)
-  }
-
-  useEffect(() => {
-    resetAutoRotation()
 
     return () => {
-      if (intervalRef.current) {
-        clearInterval(intervalRef.current)
-      }
-      if (pauseTimeoutRef.current) {
-        clearTimeout(pauseTimeoutRef.current)
-      }
+      if (intervalRef.current) clearInterval(intervalRef.current)
     }
-  }, [isPaused, data.length])
+  }, [isPaused])
+
+  // When progress reaches 100, move to next item and reset progress
+  useEffect(() => {
+    if (progress >= 100) {
+      setProgress(0)
+      setActiveIndex((prevIndex) => (prevIndex + 1) % data.length)
+    }
+  }, [progress, data.length])
 
   const handleItemClick = (index: number) => {
     setActiveIndex(index)
@@ -57,7 +48,7 @@ export default function FeatureAccordion({ data }: FeatureAccordionProps) {
 
     pauseTimeoutRef.current = setTimeout(() => {
       setIsPaused(false)
-    }, 10000) // Resume after 10 seconds of inactivity
+    }, 10000) // Resume after 10 seconds
   }
 
   const handleMouseEnter = () => {
@@ -75,7 +66,11 @@ export default function FeatureAccordion({ data }: FeatureAccordionProps) {
   }
 
   return (
-    <div className="flex flex-col md:flex-row gap-8" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+    <div
+      className="flex flex-col md:flex-row gap-8"
+      onMouseEnter={handleMouseEnter}
+      onMouseLeave={handleMouseLeave}
+    >
       {/* Left panel - Category selection */}
       <div className="md:w-1/3">
         <div className="space-y-2">
@@ -84,7 +79,9 @@ export default function FeatureAccordion({ data }: FeatureAccordionProps) {
               key={item.id}
               onClick={() => handleItemClick(index)}
               className={`w-full text-left p-4 rounded-lg transition-colors ${
-                activeIndex === index ? "bg-sitecore-red text-white" : "bg-gray-100 hover:bg-gray-200"
+                activeIndex === index
+                  ? "bg-sitecore-red text-white"
+                  : "bg-gray-100 hover:bg-gray-200"
               }`}
               aria-selected={activeIndex === index}
             >
@@ -97,8 +94,11 @@ export default function FeatureAccordion({ data }: FeatureAccordionProps) {
       {/* Right panel - Content display */}
       <div className="md:w-2/3">
         <div className="bg-white rounded-lg shadow-md overflow-hidden">
-          <div className="progress-bar">
-            <div className="progress-bar-inner" style={{ width: `${progress}%` }} />
+          <div className="progress-bar h-1 bg-gray-200">
+            <div
+              className="progress-bar-inner h-full bg-sitecore-red transition-all duration-100 ease-linear"
+              style={{ width: `${progress}%` }}
+            />
           </div>
 
           <div className="p-6">
@@ -119,4 +119,3 @@ export default function FeatureAccordion({ data }: FeatureAccordionProps) {
     </div>
   )
 }
-

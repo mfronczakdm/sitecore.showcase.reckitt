@@ -12,11 +12,11 @@ export const xmCloudData: FeatureItem[] = [
   },
   {
     id: "increase-execution",
-    title: "We can increase your ability to Execute",
+    title: "take campaign creation to a whole new level",
     description:
-      "Sitecore streamlines content creation, asset management, and omnichannel delivery, enabling teams to launch campaigns faster and more efficiently.",
+      "AI that is embedded across your workflow, showing up at the exact moment you need support — whether that's crafting content, adapting messaging, or aligning assets to audience segments. It’s proactive, contextual, and always tuned into the specifics of your business.",
     imageUrl:
-      "https://na-sales-engineering.sitecoresandbox.cloud/api/public/content/10fd7c79f5ee4a0d999ba1a794866650?v=abd9cd87",
+      "https://res.cloudinary.com/ddaiqvtfq/image/upload/v1744896608/Stream_Introduction_Time_0_00_22_02_hmekiq.png",
   },
   {
     id: "drive-innovation",
@@ -30,9 +30,9 @@ export const xmCloudData: FeatureItem[] = [
     id: "agile-marketing",
     title: "Make your marketing teams agile",
     description:
-      "Sitecore's intuitive UI, workflow automation, and real-time collaboration tools help marketers quickly adapt and respond to changing business needs. All backed by brand-aware AI with Stream",
+      "Sitecore gives you one source of truth for all content—copy, images, video, documents, campaign briefs, etc.",
     imageUrl:
-      "https://na-sales-engineering.sitecoresandbox.cloud/api/public/content/10fd7c79f5ee4a0d999ba1a794866650?v=abd9cd87",
+      "https://res.cloudinary.com/ddaiqvtfq/image/upload/v1744902018/ContentHubOps_w9sfst.png",
   },
   {
     id: "seo-revenue",
@@ -46,9 +46,9 @@ export const xmCloudData: FeatureItem[] = [
     id: "future-proof",
     title: "Have a composable solution that is future-proof",
     description:
-      "Sitecore's modular, API-first approach ensures seamless integrations and long-term adaptability to evolving digital trends.",
+      "Sitecore’s composable platform empowers brands to deliver agile, personalized digital experiences by unifying content, experience, and commerce. ",
     imageUrl:
-      "https://doc.sitecore.com/_next/image?url=https%3A%2F%2Fresources.doc.sitecore.com%2Fassets%2Fimage%2Fuuid-bee1fc8e-6072-dfaf-fb48-c4157e4fd101.png&w=3840&q=75",
+      "https://media.licdn.com/dms/image/v2/D4D12AQHT0qmyu9WbAA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1686914144211?e=1750291200&v=beta&t=0PpE_7NvpzvHVwL-mlPejvd8bOTko4RSkcBzliyN440",
   },
 ]
 

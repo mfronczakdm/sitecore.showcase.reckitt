@@ -16,8 +16,8 @@ export default function Header() {
           </div>
           <div className="h-10 w-32 relative">
             <Image
-              src="https://na-sales-engineering.sitecoresandbox.cloud/api/public/content/cd3eaa72ebc4414bb98d618417132db1?v=dd6187e0"
-              alt="The Leading Hotels of the World Logo"
+              src="https://www.reckitt.com/assets/wwbhjej5/headerlogo.svg"
+              alt="reckitt logo"
               fill
               className="object-contain"
               priority
