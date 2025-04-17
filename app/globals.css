@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+.progress-bar {
+  height: 4px;
+  background-color: rgba(225, 53, 36, 0.2);
+  position: relative;
+  overflow: hidden;
+  border-radius: 2px;
+}
+
+.progress-bar-inner {
+  position: absolute;
+  height: 100%;
+  background-color: #e13524;
+  transition: width 0.1s linear;
+}
+
+.video-container {
+  position: relative;
+  padding-bottom: 56.25%; /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+}
+
+.video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Hide scrollbar but keep functionality */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+.gradient-bg {
+  background-image: url("https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Background1-4aNNC7VoeTQ2v5XzCiqXEeI8AlGLmA.png");
+  background-size: cover;
+  background-position: center;
+}
+
