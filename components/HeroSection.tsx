@@ -6,10 +6,10 @@ export default function HeroSection() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col items-center text-center">
           <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-gray-800 mb-4">
-            The experience platform trusted by digital visionaries
+            Composable by Design. Trusted by Visionaries. Powered by Sitecore.
           </h1>
           <p className="text-lg md:text-xl text-gray-700 mb-2 max-w-3xl">
-            Optimizing end-to-end experience for outcome driven results.
+            Empowering Reckitt's mission to protect, heal, and nurture in the relentless pursuit of a cleaner, healthier world..
           </p>
           <p className="text-lg md:text-xl italic text-gray-700 mb-8 max-w-3xl">
             "We Go Further to Help You Go Farther."
