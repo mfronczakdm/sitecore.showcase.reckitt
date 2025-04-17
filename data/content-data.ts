@@ -50,6 +50,30 @@ export const xmCloudData: FeatureItem[] = [
     imageUrl:
       "https://media.licdn.com/dms/image/v2/D4D12AQHT0qmyu9WbAA/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1686914144211?e=1750291200&v=beta&t=0PpE_7NvpzvHVwL-mlPejvd8bOTko4RSkcBzliyN440",
   },
+  {
+    id: "Know Your Customers",
+    title: "Get Real-Time Customer Insights",
+    description:
+      "Gain a 360° view of every customer by unifying behavioral, transactional, and contextual data across channels. Drive smarter decisions and more relevant engagement. ",
+    imageUrl:
+      "https://res.cloudinary.com/ddaiqvtfq/image/upload/v1744921630/Sitecore_Personalization_and_Decisioning_at_Scale_avvzye.png",
+  },
+  {
+    id: "Deliver Moments that Matter",
+    title: "Have AI-Powered Experiences",
+    description:
+      "Create and test personalized offers, messages, and experiences in real time—without developer dependencies. Increase conversions with dynamic, data-driven targeting. ",
+    imageUrl:
+      "https://res.cloudinary.com/ddaiqvtfq/image/upload/v1744921844/Personalize_oey8uw.png",
+  },
+  {
+    id: "Power Flexible Commerce",
+    title: "Deliver Composable Commerce at Scale",
+    description:
+      "Support any commerce model (B2C, B2B, or marketplace) with API-first architecture. Launch faster, adapt quickly, and build seamless buying journeys across touchpoints. ",
+    imageUrl:
+      "https://mms-delivery.sitecorecloud.io/api/media/v2/delivery/72429ea3-a2fe-42e0-3aa7-08db18bd4ed9/f25b73abec6d4274b91832d1fa609279",
+  },
 ]
 
 // Content Management System detailed categories
